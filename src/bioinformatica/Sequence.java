@@ -6,7 +6,8 @@ public class Sequence {
     public String chromosome;
     public int start;
     public int end;
-
+    
+    
     public Sequence next;
     
     public Sequence(){};
@@ -19,7 +20,6 @@ public class Sequence {
         this.end = end;
     }
 
-    
 
     
     public String toString()

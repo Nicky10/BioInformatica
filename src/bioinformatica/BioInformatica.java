@@ -65,7 +65,7 @@ public class BioInformatica {
                 int lenght, start, datasize = 100;
                 for (int i = 0; i < datasize; i++)
                 {
-                    lenght=rd.nextInt(50)+1;
+                    lenght=rd.nextInt(46)+ 5;
                     start=rd.nextInt(1000+1);
                     String experimental_read=sequence(lenght) + "," + chromosome()+ "," + start + "," + (start + (lenght - 1) + "\n");
                     bw.write(experimental_read );
