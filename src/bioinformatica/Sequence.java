@@ -24,6 +24,6 @@ public class Sequence {
     
     public String toString()
     {
-        return "Sequence: " + sequence + "    Chromosome: " + chromosome;
+        return "Sequence: " + sequence + "\tChromosome: " + chromosome +"\tStart: " + start + "\tEnd: " + end + "\n";
     }
 }

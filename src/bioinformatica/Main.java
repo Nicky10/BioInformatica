@@ -23,7 +23,7 @@ public class Main {
             while (input!=null)
             {
                 String[] data = input.split(",");
-                sequences.insertAtEnd(new Node(new Sequence(data[0],data[1],Integer.parseInt(data[2]),Integer.parseInt(data[3]))));
+                sequences.insertAtEnd(new Sequence(data[0],data[1],Integer.parseInt(data[2]),Integer.parseInt(data[3])));
             
             input=br.readLine();
         }
@@ -32,7 +32,5 @@ public class Main {
         catch(Exception ex)
         {}
     }
-    
-    
-            
+       
 }

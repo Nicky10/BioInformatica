@@ -17,7 +17,7 @@ import java.io.OutputStreamWriter;
  */
 public class Stack {
 
-    Node head;
+    Sequence head;
     
     public boolean isEmpty() 
     {
@@ -26,7 +26,7 @@ public class Stack {
     
     public void pop() 
     {
-        Node temp = head;
+        Sequence temp = head;
         head = head.next;
         temp = null;
         System.gc();
@@ -35,13 +35,13 @@ public class Stack {
     public void printStack() throws IOException 
     {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        Node temp = head;
+        Sequence temp = head;
 
         try {
             bw.write("Grades: \n");
             while (!isEmpty()) 
             {
-                bw.write(peek());
+                bw.write(push());
                 temp = temp.next;
 
             }
@@ -55,18 +55,18 @@ public class Stack {
     
     
     
-    public String peek() 
+    public String push() 
     {
-        Node temp = head;
+        Sequence temp = head;
         head = head.next;
-        String info = temp.ToString();
+        String info = temp.toString();
         return info;
     }
 
     
-    public void push(Node newNode) {
-        newNode.next = head;
-        head = newNode;
+    public void push(Sequence newSequence) {
+        newSequence.next = head;
+        head = newSequence;
     }
 
     

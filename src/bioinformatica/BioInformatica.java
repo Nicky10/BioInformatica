@@ -62,13 +62,13 @@ public class BioInformatica {
             FileWriter file = new FileWriter("sequences.txt");
             try (BufferedWriter bw = new BufferedWriter(file)) {
                 Random rd = new Random();
-                int lenght, start, datasize = 100000;
+                int lenght, start, datasize = 100;
                 for (int i = 0; i < datasize; i++)
                 {
                     lenght=rd.nextInt(50)+1;
                     start=rd.nextInt(1000+1);
-                    String experimental_read=sequence(lenght) + "," + chromosome()+ "," + start + "," + (start + (lenght - 1));
-                    bw.write(experimental_read + "\n\n");
+                    String experimental_read=sequence(lenght) + "," + chromosome()+ "," + start + "," + (start + (lenght - 1) + "\n");
+                    bw.write(experimental_read );
                 }   bw.flush();
             }
             

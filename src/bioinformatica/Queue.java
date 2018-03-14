@@ -17,28 +17,28 @@ public class Queue {
         return head == null ? true : false;
     }
     
-        Node head = null;
+        Sequence head = null;
 
     
-    public void enqueue(Node newNode) {
+    public void enqueue(Sequence newSequence) {
         if (isEmpty()) 
         {
-            head = newNode;
+            head = newSequence;
         } else {
-            Node temp = head;
+            Sequence temp = head;
             while (temp.next != null) {
                 temp = temp.next;
             }
-            temp.next = newNode;
+            temp.next = newSequence;
 
         }
     }
     
     public String dequeue() 
     {
-        Node temp = head;
+        Sequence temp = head;
         head = head.next;
-        String info = temp.ToString();
+        String info = temp.toString();
         temp = null;
         System.gc();
         return info;
